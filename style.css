@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 800px;
+    max-width: 100%;
+    margin: 1.5rem auto;
+    background: #f0f0f0;
+    position: relative;
+}
+
+#webgl {
+    max-width: 100%;
+    display: block;
+}
+
+#form {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+}
+
+.meshes-wrapper {
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 50%;
+    overflow-y: auto;
+    width: 50%;
+}
+.meshes-wrapper li {
+    padding: .5rem 2rem .5rem 1rem;
+    position: relative;
+    margin-bottom: .2rem;
+    background: #f0f0f0;
+}
+.meshes-wrapper button {
+    position: absolute;
+    right: .25rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.meshes-wrapper button:before,
+.meshes-wrapper button:after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: .6rem;
+    transform: rotate(45deg);
+    background: #000;
+    top: .2rem;
+    left: .385rem;
+}
+.meshes-wrapper button:after {
+    transform: rotate(-45deg);
+}
+
+.invalid {
+    border-color: red;
+}

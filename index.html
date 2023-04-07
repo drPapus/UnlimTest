@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="container">
+      <form id="form">
+        <select id="geometry" aria-label="Geometry">
+          <option disabled selected hidden>Geometry</option>
+          <option value="box">Box</option>
+          <option value="capsule">Capsule</option>
+          <option value="circle">Circle</option>
+          <option value="cone">Cone</option>
+          <option value="cylinder">Cylinder</option>
+          <option value="dodecahedron">Dodecahedron</option>
+          <option value="icosahedron">Icosahedron</option>
+          <option value="lathe">Lathe</option>
+          <option value="octahedron">Octahedron</option>
+          <option value="ring">Ring</option>
+          <option value="sphere">Sphere</option>
+          <option value="tetrahedron">Tetrahedron</option>
+          <option value="torus">Torus</option>
+          <option value="torus-knot">TorusKnot</option>
+        </select>
+        <input type="number" step=".01" id="scale" placeholder="Scale" aria-label="Scale">
+        <button type="button" id="create">Create</button>
+      </form>
+      <canvas id="webgl" width="800" height="600"></canvas>
+      <ul class="meshes-wrapper">
+      </ul>
+    </div>
+  
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
